@@ -3,11 +3,11 @@ using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Welp.Pages
 {
-    public class madeit : PageModel
+    public class Homepage : PageModel
     {
-        private readonly ILogger<madeit> _logger;
+        private readonly ILogger<Homepage> _logger;
 
-        public madeit(ILogger<madeit> logger)
+        public Homepage(ILogger<Homepage> logger)
         {
             _logger = logger;
         }

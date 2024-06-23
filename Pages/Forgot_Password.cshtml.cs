@@ -1,18 +1,13 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Logging;
 
 namespace Welp.Pages
 {
-    public class ForgotPassword : PageModel
+    public class Forgot_Password : PageModel
     {
-        private readonly ILogger<ForgotPassword> _logger;
+        private readonly ILogger<Forgot_Password> _logger;
 
-        public ForgotPassword(ILogger<ForgotPassword> logger)
+        public Forgot_Password(ILogger<Forgot_Password> logger)
         {
             _logger = logger;
         }

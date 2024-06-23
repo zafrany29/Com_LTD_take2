@@ -41,7 +41,7 @@ namespace Welp.Controllers
 
                     if (user != null)
                     {
-                        return RedirectToAction("Index", "madeit");
+                        return RedirectToAction("Index", "Homepage");
                     }
                     else
                     {

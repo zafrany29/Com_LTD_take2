@@ -1,0 +1,39 @@
+﻿@page
+@model Welp.Pages.HomepageModel
+
+@{
+    ViewData["Title"] = "Homepage";
+}
+
+<h2>Company Information</h2>
+
+<div class="row">
+    @if (Model.Companies != null && Model.Companies.Any())
+    {
+        @foreach (var company in Model.Companies)
+        {
+            <div class="col-md-4">
+                <div class="card mb-4 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title">@company.CompanyName</h5>
+                        <p class="card-text">
+                            <strong>Country:</strong> @company.Country<br />
+                            <strong>Size:</strong> @company.Size<br />
+                            <strong>Days:</strong> @company.Days<br />
+                            <strong>Price:</strong> @company.Price<br />
+                        </p>
+                    </div>
+                </div>
+            </div>
+        }
+    }
+    else
+    {
+        <div class="col-md-12">
+            <p>Failed to upload data</p>
+        }
+    }
+</div>
+    
+
+}
