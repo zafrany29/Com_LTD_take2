@@ -40,7 +40,7 @@ namespace Welp.Controllers
                 await _context.SaveChangesAsync();
 
                 // Redirect to "Forgot_Password" page upon successful registration
-                return RedirectToAction("Index", "Forgot_Password");
+                return RedirectToAction("Index", "madeit");
             }
             return View(model);
         }
