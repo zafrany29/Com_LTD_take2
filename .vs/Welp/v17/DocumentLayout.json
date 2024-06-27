@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "E:\\trail and error\\Welp\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\passwordsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\passwordsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\forgot_password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\forgot_password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
@@ -19,16 +27,8 @@
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\registerform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\forgot_password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\forgot_password.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\forgot_password.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\forgot_password.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\passwordsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\passwordsent.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\forgotpasswordviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -126,7 +126,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -134,7 +134,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "Forgot_Password.cshtml",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml",
               "RelativeDocumentMoniker": "Pages\\Forgot_Password.cshtml",
@@ -147,7 +147,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ForgotPasswordController.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\ForgotPasswordController.cs",
               "RelativeDocumentMoniker": "Controllers\\ForgotPasswordController.cs",
@@ -160,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "PasswordSent.cshtml",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\PasswordSent.cshtml",
               "RelativeDocumentMoniker": "Pages\\PasswordSent.cshtml",
@@ -173,7 +173,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 4,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegisterController.cs",
@@ -186,7 +186,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "RegisterForm.cshtml",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\RegisterForm.cshtml",
               "RelativeDocumentMoniker": "Pages\\RegisterForm.cshtml",
@@ -199,7 +199,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
@@ -212,7 +212,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "Forgot_Password.cshtml.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Forgot_Password.cshtml.cs",

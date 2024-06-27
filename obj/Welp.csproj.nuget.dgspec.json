@@ -46,13 +46,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-<<<<<<< HEAD
             "Mailjet.Api": {
               "target": "Package",
               "version": "[3.0.0, )"
             },
-=======
->>>>>>> a5a16aa0ad00dc934fa7d611bb2cf4e9a192e265
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
