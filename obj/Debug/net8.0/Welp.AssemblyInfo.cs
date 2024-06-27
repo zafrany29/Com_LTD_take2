@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Welp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f736ccce4d16b4af6335a16e6e4744f2e457d664")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c8b7073d12ca8a8fb1d06e154240c1880295893d")]
 [assembly: System.Reflection.AssemblyProductAttribute("Welp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Welp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
