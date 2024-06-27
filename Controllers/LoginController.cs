@@ -5,6 +5,9 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Logging;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
+using System.Text;
+using System.Security.Cryptography;
+
 
 namespace Welp.Controllers
 {
@@ -33,7 +36,7 @@ namespace Welp.Controllers
                 try
                 {
                     var username = model.Username;
-                    var password = model.Password;
+                    var password = ComputeSha1Hash(model.Password);
 
                     var user = await _context.Users
                         .FromSqlRaw("SELECT * FROM Users WHERE Username = {0} AND Password = {1}", username, password)
@@ -58,6 +61,15 @@ namespace Welp.Controllers
 
             // If we got this far, something failed; redisplay the form
             return RedirectToAction("Index", "Index");
+        }
+        private string ComputeSha1Hash(string input)
+        {
+            using (var sha1 = SHA1.Create())
+            {
+                var bytes = Encoding.UTF8.GetBytes(input);
+                var hash = sha1.ComputeHash(bytes);
+                return Convert.ToBase64String(hash);
+            }
         }
     }
 
