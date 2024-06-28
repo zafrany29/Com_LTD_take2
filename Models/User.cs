@@ -33,5 +33,8 @@ namespace Welp.Models
         public required string Country { get; set; }
 
         public DateTime CreatedAt { get; set; } = DateTime.Now;
+
+        [Required]
+        public required eUserTypes UserType { get; set; }
     }
 }

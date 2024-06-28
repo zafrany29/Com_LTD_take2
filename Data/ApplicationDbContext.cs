@@ -10,7 +10,12 @@ namespace Welp.Data
         {
         }
 
-        public DbSet<User> Users { get; set; }
-        public DbSet<CompanyInfo> CompanyInfos { get; set; }
+        public DbSet<User> Users { get; set; } 
+        public DbSet<CompanyInfo> CompanyInfos { get; set; } 
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+        }
     }
 }

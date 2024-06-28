@@ -33,6 +33,9 @@ namespace Welp.Models
         [Required]
         [StringLength(50)]
         public string Country { get; set; }
+
+        [Required]
+        public eUserTypes UserType { get; set; }
     }
 
     // Custom validator for checking dictionary words

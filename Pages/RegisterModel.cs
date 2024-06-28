@@ -56,7 +56,8 @@ namespace Welp.Pages
                     Password = ComputeSha1Hash(RegisterViewModel.Password),
                     PhoneNumber = RegisterViewModel.PhoneNumber,
                     City = RegisterViewModel.City,
-                    Country = RegisterViewModel.Country
+                    Country = RegisterViewModel.Country,
+                    UserType = RegisterViewModel.UserType
                 };
 
                 _context.Add(user);

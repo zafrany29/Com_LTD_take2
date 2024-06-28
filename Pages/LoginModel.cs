@@ -6,6 +6,7 @@ using Welp.Models;
 using System.Threading.Tasks;
 using System.Text;
 using System.Security.Cryptography;
+using Mailjet.Client.Resources;
 
 namespace Welp.Pages
 {
@@ -49,7 +50,16 @@ namespace Welp.Pages
 
                 if (existingUser != null)
                 {
-                    return RedirectToPage("/Homepage");
+                    string redirectionPath = "/Homepage";
+
+                    switch (existingUser.UserType)
+                    {
+                        case eUserTypes.Admin:
+                            redirectionPath = "/AdminHomepage";
+                            break;
+                    }
+
+                    return RedirectToPage(redirectionPath);
                 }
                 else
                 {
