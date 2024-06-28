@@ -1,76 +1,59 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Welp.Data;
 using Welp.Models;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Logging;
 using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using System.Text;
 using System.Security.Cryptography;
-
+using System.Text;
+using Welp.Data;
 
 namespace Welp.Controllers
 {
     public class LoginController : Controller
     {
         private readonly ApplicationDbContext _context;
-        private readonly ILogger<LoginController> _logger;
 
-        public LoginController(ApplicationDbContext context, ILogger<LoginController> logger)
+        public LoginController(ApplicationDbContext context)
         {
             _context = context;
-            _logger = logger;
+        }
+
+        [HttpPost]
+        public IActionResult Index(LoginViewModel model)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View("/Pages/Index.cshtml", model);
+            }
+
+            // Hash the input password using SHA-1
+            using (SHA1 sha1 = SHA1.Create())
+            {
+                var passwordBytes = Encoding.UTF8.GetBytes(model.Password);
+                var hashedBytes = sha1.ComputeHash(passwordBytes);
+                var hashedPassword = BitConverter.ToString(hashedBytes).Replace("-", "").ToLower();
+
+                // Check if user exists
+                var user = _context.Users
+                    .FirstOrDefault(u => u.Username == model.Username && u.Password == hashedPassword);
+
+                if (user != null)
+                {
+                    // Redirect to home page
+                    return RedirectToPage("/HomePage");
+                }
+                else
+                {
+                    // Add model error and return view with error message
+                    ModelState.AddModelError(string.Empty, "Username or Password are incorrect");
+                    return View("/Pages/Index.cshtml", model);
+                }
+            }
         }
 
         [HttpGet]
         public IActionResult Index()
         {
-            return View();
-        }
-
-        [HttpPost]
-        public async Task<IActionResult> Index(LoginViewModel model)
-        {
-            if (ModelState.IsValid)
-            {
-                try
-                {
-                    var username = model.Username;
-                    var password = ComputeSha1Hash(model.Password);
-
-                    var user = await _context.Users
-                        .FromSqlRaw("SELECT * FROM Users WHERE Username = {0} AND Password = {1}", username, password)
-                        .FirstOrDefaultAsync();
-
-                    if (user != null)
-                    {
-                        return RedirectToAction("Index", "Homepage");
-                    }
-                    else
-                    {
-                        ModelState.AddModelError(string.Empty, "Invalid username or password.");
-                        return RedirectToAction("Index", "RegisterForm");
-                    }
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error occurred during user authentication.");
-                    ModelState.AddModelError(string.Empty, "An error occurred while processing your request. Please try again later.");
-                }
-            }
-
-            // If we got this far, something failed; redisplay the form
-            return RedirectToAction("Index", "Index");
-        }
-        private string ComputeSha1Hash(string input)
-        {
-            using (var sha1 = SHA1.Create())
-            {
-                var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = sha1.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
-            }
+            var model = new LoginViewModel();
+            return View("/Pages/Index.cshtml", model);
         }
     }
-
 }

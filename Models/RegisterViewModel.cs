@@ -11,7 +11,7 @@ namespace Welp.Models
 
         [Required]
         [DataType(DataType.Password)]
-        [MinLength(10, ErrorMessage = "The password must be at least 10 characters long.")]
+        [MinLength(5, ErrorMessage = "The password must be at least 10 characters long.")]
         [RegularExpression(@"^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[^\da-zA-Z]).{10,}$",
             ErrorMessage = "The password must include at least one uppercase letter, one lowercase letter, one digit, and one special character.")]
         [CustomDictionaryValidator(ErrorMessage = "Password must not contain common dictionary words.")]
