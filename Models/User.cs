@@ -36,5 +36,9 @@ namespace Welp.Models
 
         [Required]
         public required eUserTypes UserType { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        public required string Salt { get; set; } 
     }
 }

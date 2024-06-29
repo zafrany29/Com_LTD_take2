@@ -26,12 +26,20 @@ namespace Welp.Pages
             // Initialize with default values if needed
         }
 
-        private string ComputeSha1Hash(string input)
+        private string GenerateSalt(int size)
         {
-            using (var sha1 = SHA1.Create())
+            var rng = new RNGCryptoServiceProvider();
+            var salt = new byte[size];
+            rng.GetBytes(salt);
+            return Convert.ToBase64String(salt);
+        }
+
+        private string ComputeHmacHash(string input, string salt)
+        {
+            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
             {
                 var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = sha1.ComputeHash(bytes);
+                var hash = hmac.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
         }
@@ -49,15 +57,23 @@ namespace Welp.Pages
                     ModelState.AddModelError(string.Empty, "User already exists, please try again.");
                     return Page();
                 }
+
+                // Generate salt
+                var salt = GenerateSalt(32); // 32 bytes for salt
+
+                // Compute HMAC hash
+                var hashedPassword = ComputeHmacHash(RegisterViewModel.Password, salt);
+
                 var user = new User
                 {
                     Username = RegisterViewModel.Username,
                     Email = RegisterViewModel.Email,
-                    Password = ComputeSha1Hash(RegisterViewModel.Password),
+                    Password = hashedPassword,
                     PhoneNumber = RegisterViewModel.PhoneNumber,
                     City = RegisterViewModel.City,
                     Country = RegisterViewModel.Country,
-                    UserType = RegisterViewModel.UserType
+                    UserType = RegisterViewModel.UserType,
+                    Salt = salt
                 };
 
                 _context.Add(user);

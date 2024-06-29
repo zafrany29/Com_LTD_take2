@@ -6,7 +6,6 @@ using Welp.Models;
 using System.Threading.Tasks;
 using System.Text;
 using System.Security.Cryptography;
-using Mailjet.Client.Resources;
 
 namespace Welp.Pages
 {
@@ -28,44 +27,47 @@ namespace Welp.Pages
             LoginViewModel = new LoginViewModel(); // Ensure the view model is not null
         }
 
-        private string ComputeSha1Hash(string input)
+        private string ComputeHmacHash(string input, string salt)
         {
-            using (var sha1 = SHA1.Create())
+            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
             {
                 var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = sha1.ComputeHash(bytes);
+                var hash = hmac.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
         }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
             {
-                // Hash the input password
-                string hashedPassword = ComputeSha1Hash(LoginViewModel.Password);
-
-                // Check if the user exists with the hashed password
+                // Retrieve the user by username
                 var existingUser = await _context.Users
-                    .FirstOrDefaultAsync(u => u.Username == LoginViewModel.Username && u.Password == hashedPassword);
+                    .FirstOrDefaultAsync(u => u.Username == LoginViewModel.Username);
 
                 if (existingUser != null)
                 {
-                    string redirectionPath = "/Homepage";
+                    // Hash the input password with the user's salt
+                    string hashedPassword = ComputeHmacHash(LoginViewModel.Password, existingUser.Salt);
 
-                    switch (existingUser.UserType)
+                    // Check if the hashed password matches the stored password
+                    if (existingUser.Password == hashedPassword)
                     {
-                        case eUserTypes.Admin:
-                            redirectionPath = "/AdminHomepage";
-                            break;
-                    }
+                        string redirectionPath = "/Homepage";
 
-                    return RedirectToPage(redirectionPath);
+                        switch (existingUser.UserType)
+                        {
+                            case eUserTypes.Admin:
+                                redirectionPath = "/AdminHomepage";
+                                break;
+                        }
+
+                        return RedirectToPage(redirectionPath);
+                    }
                 }
-                else
-                {
-                    ModelState.AddModelError(string.Empty, "Username or Password are incorrect");
-                    return Page();
-                }
+
+                ModelState.AddModelError(string.Empty, "Username or Password are incorrect");
+                return Page();
             }
 
             return Page();
