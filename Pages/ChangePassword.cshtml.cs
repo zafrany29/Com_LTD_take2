@@ -77,7 +77,7 @@ namespace Welp.Pages
                     _logger.LogInformation("UserCookie not found or empty.");
                 }
 
-                return Page();
+                return RedirectToPage("/Index");
             }
 
             // Process the form submission (change password logic)

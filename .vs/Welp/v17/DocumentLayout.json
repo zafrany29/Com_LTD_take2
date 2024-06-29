@@ -3,28 +3,56 @@
   "WorkspaceRootPath": "E:\\trail and error\\Welp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\loginmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\registerform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\registerform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\homepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\homepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\hasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\hasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\adminhomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\adminhomepage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\addclient.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\addclient.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\changepassword.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\changepassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\controllers\\forgotpasswordcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -37,30 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\registermodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\registerform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\registerform.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\addclient.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\homepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\homepagemodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\models\\hasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:models\\hasher.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\pages\\addclient.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|solutionrelative:pages\\addclient.cshtml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{2EE987F8-F30A-42F5-879E-F9076A4BD635}|Welp.csproj|e:\\trail and error\\welp\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -98,7 +102,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 7,
+          "SelectedChildIndex": 8,
           "Children": [
             {
               "$type": "Bookmark",
@@ -110,20 +114,45 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ChangePassword.cshtml",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml",
-              "RelativeDocumentMoniker": "Pages\\ChangePassword.cshtml",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml",
-              "RelativeToolTip": "Pages\\ChangePassword.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABFAAAA",
+              "DocumentIndex": 4,
+              "Title": "AdminHomePage.cshtml",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\AdminHomePage.cshtml",
+              "RelativeDocumentMoniker": "Pages\\AdminHomePage.cshtml",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\AdminHomePage.cshtml",
+              "RelativeToolTip": "Pages\\AdminHomePage.cshtml",
+              "ViewState": "AQIAABgAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T19:44:24.502Z",
+              "WhenOpened": "2024-06-29T23:03:12.408Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AddClient.cshtml",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml",
+              "RelativeDocumentMoniker": "Pages\\AddClient.cshtml",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml",
+              "RelativeToolTip": "Pages\\AddClient.cshtml",
+              "ViewState": "AQIAAA8AAAAAAAAAAAAcwB4AAAAHAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-28T13:38:54.957Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
+              "Title": "ApplicationDbContext.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Data\\ApplicationDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Data\\ApplicationDbContext.cs",
+              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T13:51:43.606Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "HomepageModel.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Models\\HomepageModel.cs",
               "RelativeDocumentMoniker": "Models\\HomepageModel.cs",
@@ -136,124 +165,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "RegisterModel.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\RegisterModel.cs",
-              "RelativeDocumentMoniker": "Pages\\RegisterModel.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\RegisterModel.cs",
-              "RelativeToolTip": "Pages\\RegisterModel.cs",
-              "ViewState": "AQIAABAAAAAAAAAAAAAQwDIAAAA0AAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-27T16:13:47.143Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApplicationDbContext.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "Data\\ApplicationDbContext.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T13:51:43.606Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "LoginModel.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\LoginModel.cs",
-              "RelativeDocumentMoniker": "Pages\\LoginModel.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\LoginModel.cs",
-              "RelativeToolTip": "Pages\\LoginModel.cs",
-              "ViewState": "AQIAACAAAAAAAAAAAAAtwEQAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T11:37:08.485Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "ChangePassword.cshtml.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml.cs",
-              "RelativeDocumentMoniker": "Pages\\ChangePassword.cshtml.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml.cs*",
-              "RelativeToolTip": "Pages\\ChangePassword.cshtml.cs*",
-              "ViewState": "AQIAACwAAAAAAAAAAIAwwEAAAABCAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T19:44:24.102Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ForgotPasswordController.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\ForgotPasswordController.cs",
-              "RelativeDocumentMoniker": "Controllers\\ForgotPasswordController.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Controllers\\ForgotPasswordController.cs",
-              "RelativeToolTip": "Controllers\\ForgotPasswordController.cs",
-              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-29T12:16:59.167Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Program.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABEAAAAEAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T10:20:26.819Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "User.cs",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Models\\User.cs",
-              "RelativeDocumentMoniker": "Models\\User.cs",
-              "ToolTip": "E:\\trail and error\\Welp\\Models\\User.cs",
-              "RelativeToolTip": "Models\\User.cs",
-              "ViewState": "AQIAABQAAAAAAAAAAAAIwCIAAAAyAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-28T11:10:21.832Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Forgot_Password.cshtml",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml",
-              "RelativeDocumentMoniker": "Pages\\Forgot_Password.cshtml",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml",
-              "RelativeToolTip": "Pages\\Forgot_Password.cshtml",
-              "ViewState": "AQIAAB0AAAAAAAAAAAAwwDoAAAAIAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-29T12:34:51.124Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "RegisterForm.cshtml",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\RegisterForm.cshtml",
-              "RelativeDocumentMoniker": "Pages\\RegisterForm.cshtml",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\RegisterForm.cshtml",
-              "RelativeToolTip": "Pages\\RegisterForm.cshtml",
-              "ViewState": "AQIAADgAAAAAAAAAAAAAAEsAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T10:06:21.028Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "Hasher.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Models\\Hasher.cs",
               "RelativeDocumentMoniker": "Models\\Hasher.cs",
@@ -266,39 +178,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "AddClient.cshtml",
-              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml",
-              "RelativeDocumentMoniker": "Pages\\AddClient.cshtml",
-              "ToolTip": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml",
-              "RelativeToolTip": "Pages\\AddClient.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAcwB4AAAAHAAAA",
+              "DocumentIndex": 1,
+              "Title": "RegisterForm.cshtml",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\RegisterForm.cshtml",
+              "RelativeDocumentMoniker": "Pages\\RegisterForm.cshtml",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\RegisterForm.cshtml",
+              "RelativeToolTip": "Pages\\RegisterForm.cshtml",
+              "ViewState": "AQIAACMAAAAAAAAAAAAAAEsAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-28T13:38:54.957Z",
+              "WhenOpened": "2024-06-28T10:06:21.028Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 0,
+              "Title": "LoginModel.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\LoginModel.cs",
+              "RelativeDocumentMoniker": "Pages\\LoginModel.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\LoginModel.cs",
+              "RelativeToolTip": "Pages\\LoginModel.cs",
+              "ViewState": "AQIAACIAAAAAAAAAAAA5wA8AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T11:37:08.485Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ChangePassword.cshtml.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeDocumentMoniker": "Pages\\ChangePassword.cshtml.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml.cs",
+              "RelativeToolTip": "Pages\\ChangePassword.cshtml.cs",
+              "ViewState": "AQIAABYAAAAAAAAAAAAhwCEAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T19:44:24.102Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AQIAACsAAAAAAAAAAAAcwDoAAAAUAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T10:20:26.819Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ChangePassword.cshtml",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml",
+              "RelativeDocumentMoniker": "Pages\\ChangePassword.cshtml",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\ChangePassword.cshtml",
+              "RelativeToolTip": "Pages\\ChangePassword.cshtml",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAABFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-29T19:44:24.502Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "Index.cshtml",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Index.cshtml",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml",
               "ToolTip": "E:\\trail and error\\Welp\\Pages\\Index.cshtml",
               "RelativeToolTip": "Pages\\Index.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA0AAAAgAAAA",
+              "ViewState": "AQIAACkAAAAAAAAAAAAcwEEAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
               "WhenOpened": "2024-06-28T09:47:29.816Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 6,
               "Title": "AddClient.cshtml.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\AddClient.cshtml.cs",
               "ToolTip": "E:\\trail and error\\Welp\\Pages\\AddClient.cshtml.cs",
               "RelativeToolTip": "Pages\\AddClient.cshtml.cs",
-              "ViewState": "AQIAAAsAAAAAAAAAAAAAwCEAAAAAAAAA",
+              "ViewState": "AQIAACQAAAAAAAAAAIAwwCsAAAAvAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-06-28T13:50:39.339Z",
               "EditorCaption": ""
@@ -306,6 +268,54 @@
             {
               "$type": "Document",
               "DocumentIndex": 15,
+              "Title": "RegisterModel.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\RegisterModel.cs",
+              "RelativeDocumentMoniker": "Pages\\RegisterModel.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\RegisterModel.cs",
+              "RelativeToolTip": "Pages\\RegisterModel.cs",
+              "ViewState": "AQIAABAAAAAAAAAAAAAQwDIAAAA0AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-27T16:13:47.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ForgotPasswordController.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\ForgotPasswordController.cs",
+              "RelativeDocumentMoniker": "Controllers\\ForgotPasswordController.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Controllers\\ForgotPasswordController.cs",
+              "RelativeToolTip": "Controllers\\ForgotPasswordController.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAAAAkAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-29T12:16:59.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "User.cs",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Models\\User.cs",
+              "RelativeDocumentMoniker": "Models\\User.cs",
+              "ToolTip": "E:\\trail and error\\Welp\\Models\\User.cs",
+              "RelativeToolTip": "Models\\User.cs",
+              "ViewState": "AQIAABQAAAAAAAAAAAAIwCIAAAAyAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-28T11:10:21.832Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "Forgot_Password.cshtml",
+              "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml",
+              "RelativeDocumentMoniker": "Pages\\Forgot_Password.cshtml",
+              "ToolTip": "E:\\trail and error\\Welp\\Pages\\Forgot_Password.cshtml",
+              "RelativeToolTip": "Pages\\Forgot_Password.cshtml",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwDoAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-29T12:34:51.124Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
               "Title": "HomeController.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\HomeController.cs",
               "RelativeDocumentMoniker": "Controllers\\HomeController.cs",
@@ -317,7 +327,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "LoginModel (1).cs",
               "DocumentMoniker": "C:\\Users\\User\\Downloads\\LoginModel (1).cs",
               "ToolTip": "C:\\Users\\User\\Downloads\\LoginModel (1).cs",
@@ -327,7 +337,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "Homepage.cshtml.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Homepage.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Homepage.cshtml.cs",
@@ -339,7 +349,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "RegisterController.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Controllers\\RegisterController.cs",
               "RelativeDocumentMoniker": "Controllers\\RegisterController.cs",
@@ -351,7 +361,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "Index.cshtml.cs",
               "DocumentMoniker": "E:\\trail and error\\Welp\\Pages\\Index.cshtml.cs",
               "RelativeDocumentMoniker": "Pages\\Index.cshtml.cs",
@@ -363,7 +373,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "RegisterViewModel.cs",
               "DocumentMoniker": "E:\\trail and error\\Secured\\RegisterViewModel.cs",
               "RelativeDocumentMoniker": "..\\Secured\\RegisterViewModel.cs",
@@ -375,7 +385,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "VulnerableExamples.cs",
               "DocumentMoniker": "E:\\trail and error\\VulnerableExamples.cs",
               "RelativeDocumentMoniker": "..\\VulnerableExamples.cs",
@@ -387,7 +397,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "User.cs",
               "DocumentMoniker": "E:\\trail and error\\User.cs",
               "RelativeDocumentMoniker": "..\\User.cs",
