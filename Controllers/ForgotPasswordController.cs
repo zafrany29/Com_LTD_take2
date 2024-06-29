@@ -23,14 +23,13 @@ namespace Welp.Controllers
             _context = context;
             _mailjetClient = mailjetClient;
         }
+
         [HttpGet]
         public IActionResult Index()
         {
-  
             var model = new ForgotPasswordViewModel
             {
                 Username = string.Empty,
-
             };
             ViewData["Title"] = "Forgot Password";
             return View("~/Pages/Forgot_Password.cshtml", model);
@@ -46,7 +45,16 @@ namespace Welp.Controllers
                 {
                     // Generate new random password
                     var newPassword = GenerateRandomPassword();
-                    user.Password = ComputeSha1Hash(newPassword);
+
+                    // Generate new salt
+                    var newSalt = GenerateSalt(32);
+
+                    // Compute HMAC hash with the new salt
+                    var hashedPassword = ComputeHmacHash(newPassword, newSalt);
+
+                    // Update user password and salt
+                    user.Password = hashedPassword;
+                    user.Salt = newSalt;
                     await _context.SaveChangesAsync();
 
                     // Send email with new password
@@ -62,7 +70,7 @@ namespace Welp.Controllers
                 }
                 else
                 {
-                    ModelState.AddModelError("", "User does not exists, please try again.");
+                    ModelState.AddModelError("", "User does not exist, please try again.");
                     ViewData["Title"] = "Forgot Password";
                     return View("~/Pages/Forgot_Password.cshtml", model);
                 }
@@ -80,12 +88,20 @@ namespace Welp.Controllers
             return password;
         }
 
-        private string ComputeSha1Hash(string input)
+        private string GenerateSalt(int size)
         {
-            using (var sha1 = SHA1.Create())
+            var rng = new RNGCryptoServiceProvider();
+            var salt = new byte[size];
+            rng.GetBytes(salt);
+            return Convert.ToBase64String(salt);
+        }
+
+        private string ComputeHmacHash(string input, string salt)
+        {
+            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
             {
                 var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = sha1.ComputeHash(bytes);
+                var hash = hmac.ComputeHash(bytes);
                 return Convert.ToBase64String(hash);
             }
         }

@@ -32,7 +32,7 @@ namespace Welp.Pages
             _context.CompanyInfos.Add(CompanyInfo);
             _context.SaveChanges();
 
-            return RedirectToPage("/Index"); // Redirect to the homepage or any other page
+            return RedirectToPage("/AdminHomePage"); // Redirect to the homepage or any other page
         }
     }
 }
