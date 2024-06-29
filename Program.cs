@@ -11,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddRazorPages();
 builder.Services.AddControllersWithViews();
+builder.Services.AddHttpContextAccessor();
 
 // Configure the DbContext to use MySQL with retry logic
 builder.Services.AddDbContext<ApplicationDbContext>(options =>

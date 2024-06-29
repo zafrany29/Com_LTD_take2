@@ -25,25 +25,6 @@ namespace Welp.Pages
         {
             // Initialize with default values if needed
         }
-
-        private string GenerateSalt(int size)
-        {
-            var rng = new RNGCryptoServiceProvider();
-            var salt = new byte[size];
-            rng.GetBytes(salt);
-            return Convert.ToBase64String(salt);
-        }
-
-        private string ComputeHmacHash(string input, string salt)
-        {
-            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
-            {
-                var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = hmac.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
-            }
-        }
-
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
@@ -59,10 +40,10 @@ namespace Welp.Pages
                 }
 
                 // Generate salt
-                var salt = GenerateSalt(32); // 32 bytes for salt
+                var salt = Hasher.GenerateSalt(32);
 
                 // Compute HMAC hash
-                var hashedPassword = ComputeHmacHash(RegisterViewModel.Password, salt);
+                var hashedPassword = Hasher.ComputeHmacHash(RegisterViewModel.Password, salt);
 
                 var user = new User
                 {

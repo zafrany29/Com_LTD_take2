@@ -13,9 +13,12 @@ namespace Welp.Pages
     {
         private readonly ApplicationDbContext _context;
 
-        public LoginModel(ApplicationDbContext context)
+        private readonly IHttpContextAccessor _httpContextAccessor;
+
+        public LoginModel(ApplicationDbContext i_Context, IHttpContextAccessor i_HttpContextAccessor)
         {
-            _context = context;
+            _context = i_Context;
+            _httpContextAccessor = i_HttpContextAccessor;
         }
 
         [BindProperty]
@@ -25,16 +28,6 @@ namespace Welp.Pages
         {
             // Initialize with default values if needed
             LoginViewModel = new LoginViewModel(); // Ensure the view model is not null
-        }
-
-        private string ComputeHmacHash(string input, string salt)
-        {
-            using (var hmac = new HMACSHA256(Encoding.UTF8.GetBytes(salt)))
-            {
-                var bytes = Encoding.UTF8.GetBytes(input);
-                var hash = hmac.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
-            }
         }
 
         public async Task<IActionResult> OnPostAsync()
@@ -48,7 +41,9 @@ namespace Welp.Pages
                 if (existingUser != null)
                 {
                     // Hash the input password with the user's salt
-                    string hashedPassword = ComputeHmacHash(LoginViewModel.Password, existingUser.Salt);
+                    createCookie(existingUser);
+                    string hashedPassword = Hasher.ComputeHmacHash(LoginViewModel.Password, existingUser.Salt);
+                    
 
                     // Check if the hashed password matches the stored password
                     if (existingUser.Password == hashedPassword)
@@ -71,6 +66,16 @@ namespace Welp.Pages
             }
 
             return Page();
+        }
+        private void createCookie(Models.User i_User)
+        {
+            CookieOptions cookieOptions = new CookieOptions
+            {
+                Expires = DateTime.Now.AddDays(30),
+                IsEssential = true,
+            };
+
+            _httpContextAccessor.HttpContext.Response.Cookies.Append("UserCookie", $"{i_User.Username}|{i_User.Password}|{i_User.Salt}", cookieOptions);
         }
     }
 }
