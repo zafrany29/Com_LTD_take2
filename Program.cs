@@ -42,7 +42,6 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
-
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
@@ -57,6 +56,5 @@ app.MapControllerRoute(
 
 // Add support for routing Razor Pages
 app.MapRazorPages();
-
 
 app.Run();

@@ -39,6 +39,9 @@ namespace Welp.Models
 
         [Required]
         [StringLength(255)]
-        public required string Salt { get; set; } 
+        public required string Salt { get; set; }
+
+        public string PasswordHistory { get; set; }
+
     }
 }

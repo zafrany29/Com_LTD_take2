@@ -10,17 +10,20 @@ namespace Welp.Data
         {
         }
 
-        public DbSet<User> Users { get; set; } 
-        public DbSet<CompanyInfo> CompanyInfos { get; set; } 
+        public DbSet<User> Users { get; set; }
+        public DbSet<CompanyInfo> CompanyInfos { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
+
+            // הגדרת עמודת PasswordHistory כ-TEXT
+            modelBuilder.Entity<User>(entity =>
+            {
+                entity.Property(e => e.PasswordHistory)
+                    .HasColumnType("TEXT")
+                    .HasDefaultValue("[]");
+            });
         }
     }
 }
-
-
-
-//Admin
-//Admin12345!!!!!

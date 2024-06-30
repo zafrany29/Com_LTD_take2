@@ -1,9 +1,12 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
+using System.Threading.Tasks;
 using Welp.Data;
 using Welp.Models;
-using System.Threading.Tasks;
+using System.Text.Json;
+using System.Collections.Generic;
 
 namespace Welp.Pages
 {
@@ -13,11 +16,11 @@ namespace Welp.Pages
         private readonly ILogger<ChangePasswordModel> _logger;
         private readonly ApplicationDbContext _context;
 
-        public ChangePasswordModel(IHttpContextAccessor httpContextAccessor, ILogger<ChangePasswordModel> logger, ApplicationDbContext i_Context)
+        public ChangePasswordModel(IHttpContextAccessor httpContextAccessor, ILogger<ChangePasswordModel> logger, ApplicationDbContext context)
         {
             _httpContextAccessor = httpContextAccessor;
             _logger = logger;
-            _context = i_Context;
+            _context = context;
         }
 
         [BindProperty]
@@ -41,62 +44,63 @@ namespace Welp.Pages
                 {
                     string[] userParts = userCookie.Split('|');
                     string username = userParts[0];
-                    string password = userParts[1];
+                    string storedPasswordHash = userParts[1];
                     string salt = userParts[2];
 
-                    bool userExists = await _context.Users.AnyAsync(u => u.Username == username);
-                   // string hashedPassword = Hasher.ComputeHmacHash(LoginViewModel.Password, existingUser.Salt);
-
-
-                    // Check if the hashed password matches the stored password
-                  //  if (existingUser.Password == hashedPassword)
-
-                        if (userExists)
+                    var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+                    if (user != null && Hasher.ComputeHmacHash(OldPassword, salt) == storedPasswordHash) // correct password
                     {
-                        if (Hasher.ComputeHmacHash(OldPassword, salt) == password) // correct password
-                        {
-                            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
+                        // Verify that the new password is not in the history
+                        var passwordHistory = JsonSerializer.Deserialize<List<string>>(user.PasswordHistory ?? "[]");
+                        string newHashedPassword = Hasher.ComputeHmacHash(NewPassword, salt);
 
-                            if (user != null)
-                            {
-                                String Newsalt = Hasher.GenerateSalt(32);
-                                user.Password = Hasher.ComputeHmacHash(NewPassword, Newsalt); // Assuming you have a method like ComputeHmacHash in Hasher class
-                                user.Salt = Newsalt;
-                                await _context.SaveChangesAsync();
-                            }
-                            return RedirectToAction("Index");
-                        }
-                        else
+                        if (passwordHistory.Contains(newHashedPassword))
                         {
-                            ModelState.AddModelError(string.Empty, "password is incorrect");
+                            ModelState.AddModelError(string.Empty, "Cannot reuse the last 3 passwords.");
+                            return Page();
                         }
+
+                        // Update the password and the history
+                        user.Password = Hasher.ComputeHmacHash(NewPassword, salt);
+                        passwordHistory.Add(newHashedPassword);
+
+                        // Keep only the last 3 passwords
+                        if (passwordHistory.Count > 3)
+                        {
+                            passwordHistory.RemoveAt(0);
+                        }
+
+                        user.PasswordHistory = JsonSerializer.Serialize(passwordHistory);
+
+                        _context.Update(user);
+                        await _context.SaveChangesAsync();
+
+                        // Update the cookie with the new hashed password and salt
+                        var newCookieValue = $"{username}|{user.Password}|{salt}";
+                        _httpContextAccessor.HttpContext.Response.Cookies.Append("UserCookie", newCookieValue);
+
+                        return RedirectToPage("/Homepage");
+                    }
+                    else
+                    {
+                        ModelState.AddModelError(string.Empty, "Password is incorrect");
                     }
                 }
                 else
                 {
                     _logger.LogInformation("UserCookie not found or empty.");
                 }
-
-                return RedirectToPage("/Index");
             }
 
             // Process the form submission (change password logic)
-            // Example: 
-            // bool passwordChanged = _userService.ChangePassword(User.Identity.Name, OldPassword, NewPassword);
-
-            // Redirect to another page after successful password change
-            return RedirectToPage("/Homepage");
+            return Page();
         }
+    }
 
-        private async Task changePassword(string username, string password)
-        {
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Username == username);
-
-            if (user != null)
-            {
-                user.Password = Hasher.ComputeHmacHash(username, Hasher.GenerateSalt(32)); // Assuming you have a method like ComputeHmacHash in Hasher class
-                await _context.SaveChangesAsync();
-            }
-        }
+    public class ChangePasswordViewModel
+    {
+        public string Username { get; set; }
+        public string OldPassword { get; set; }
+        public string NewPassword { get; set; }
     }
 }

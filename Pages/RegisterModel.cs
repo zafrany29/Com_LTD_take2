@@ -6,6 +6,8 @@ using Welp.Models;
 using System.Threading.Tasks;
 using System.Text;
 using System.Security.Cryptography;
+using System.Text.Json;
+using System.Collections.Generic;
 
 namespace Welp.Pages
 {
@@ -25,6 +27,7 @@ namespace Welp.Pages
         {
             // Initialize with default values if needed
         }
+
         public async Task<IActionResult> OnPostAsync()
         {
             if (ModelState.IsValid)
@@ -45,6 +48,10 @@ namespace Welp.Pages
                 // Compute HMAC hash
                 var hashedPassword = Hasher.ComputeHmacHash(RegisterViewModel.Password, salt);
 
+                // Create initial password history
+                var passwordHistory = new List<string> { hashedPassword };
+                var passwordHistoryJson = JsonSerializer.Serialize(passwordHistory);
+
                 var user = new User
                 {
                     Username = RegisterViewModel.Username,
@@ -54,7 +61,8 @@ namespace Welp.Pages
                     City = RegisterViewModel.City,
                     Country = RegisterViewModel.Country,
                     UserType = RegisterViewModel.UserType,
-                    Salt = salt
+                    Salt = salt,
+                    PasswordHistory = passwordHistoryJson
                 };
 
                 _context.Add(user);
