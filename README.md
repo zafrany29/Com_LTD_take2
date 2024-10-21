@@ -19,3 +19,7 @@ A. Multiple requirements for user creation:
 B. Using cookies for user type recognition.
 
 C. Resilient against HTML injection attacks and XSS-type attacks.
+
+# Please note!
+In order to prevent use of my presonal Azure account and Mailjet program, 
+Keys we removed for the program and there for related functions will not work properly. 
